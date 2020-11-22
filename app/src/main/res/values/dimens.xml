@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <dimen name="component_margin">10dp</dimen>
+    <dimen name="edit_text_hint">12sp</dimen>
+    <dimen name="edit_text_label">14sp</dimen>
+    <dimen name="part_text_label">18sp</dimen>
+    <dimen name="text_view_left_padding">3dp</dimen>
+</resources>

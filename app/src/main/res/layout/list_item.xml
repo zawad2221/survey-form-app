@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/itemLinearView"
+        android:layout_margin="@dimen/component_margin"
+        android:padding="@dimen/component_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        >
+        <TextView
+            android:paddingLeft="@dimen/text_view_left_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_label"
+            android:id="@+id/questionTextView"
+
+            />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/option1"/>
+            <RadioButton
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/option2"
+
+                />
+            <RadioButton
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/option3"/>
+            <RadioButton
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/option4"
+
+                />
+            <RadioButton
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/option5"/>
+            <RadioButton
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/option6"
+
+                />
+        </RadioGroup>
+    </LinearLayout>
+

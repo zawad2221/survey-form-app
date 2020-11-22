@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Survey</string>
+    <string name="age_label">Age(in number; ex:22)*</string>
+    <string name="common_edit_text_hint">Your answer</string>
+    <string name="gender">Gender*</string>
+    <string name="height_label">Height(feet\' inch\'\'; ex: 5\'4\'\')*</string>
+    <string name="weight_label">Weight(kg; ex: 50 kg)*</string>
+</resources>
