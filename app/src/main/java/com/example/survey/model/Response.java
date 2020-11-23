@@ -15,8 +15,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "email",
         "age",
         "gender",
+        "height",
         "weight",
-        "answer",
+        "answers",
         "mark"
 })
 public class Response {
@@ -24,14 +25,18 @@ public class Response {
     private Integer id;
     @JsonProperty("email")
     private String email;
+
+
     @JsonProperty("age")
     private Integer age;
     @JsonProperty("gender")
     private String gender;
+    @JsonProperty("height")
+    private String height;
     @JsonProperty("weight")
     private Double weight;
-    @JsonProperty("answer")
-    private List<Answer> answer = null;
+    @JsonProperty("answers")
+    private List<Answer> answers = null;
     @JsonProperty("mark")
     private Integer mark;
     @JsonIgnore
@@ -51,6 +56,7 @@ public class Response {
     public String getEmail() {
         return email;
     }
+
 
     @JsonProperty("email")
     public void setEmail(String email) {
@@ -87,14 +93,14 @@ public class Response {
         this.weight = weight;
     }
 
-    @JsonProperty("answer")
-    public List<Answer> getAnswer() {
-        return answer;
+    @JsonProperty("answers")
+    public List<Answer> getAnswers() {
+        return answers;
     }
 
-    @JsonProperty("answer")
-    public void setAnswer(List<Answer> answer) {
-        this.answer = answer;
+    @JsonProperty("answers")
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
     }
 
     @JsonProperty("mark")
@@ -105,6 +111,15 @@ public class Response {
     @JsonProperty("mark")
     public void setMark(Integer mark) {
         this.mark = mark;
+    }
+
+    @JsonProperty("height")
+    public String getHeight() {
+        return height;
+    }
+    @JsonProperty("height")
+    public void setHeight(String height) {
+        this.height = height;
     }
 
     @JsonAnyGetter

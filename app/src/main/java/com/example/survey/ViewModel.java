@@ -1,9 +1,11 @@
 package com.example.survey;
 
-import android.graphics.Path;
+import android.content.Context;
 
+import com.example.survey.model.Answer;
 import com.example.survey.model.Option;
 import com.example.survey.model.Question;
+import com.example.survey.model.Response;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,26 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
     public List<Option> partB26;
     public List<Option> partC;
 
+
+    public Response response;
+    private List<Answer> answers;
+
+
+
+    public void saveResponse(Context context, Response response){
+        ResponseRepository responseRepository = ResponseRepository.getInstance();
+        responseRepository.saveResponse(context,response);
+    }
+
+
     public void init(){
+        response = new Response();
+        answers = new ArrayList<>();
+        for(int index=1;index<32;index++){
+            answers.add(new Answer(String.valueOf(index),""));
+        }
+        response.setAnswers(answers);
+
         partB = new ArrayList<Option>();
         partB26 = new ArrayList<Option>();
         partC = new ArrayList<Option>();
@@ -69,8 +90,6 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
         questionsB.add(new Question("Am terrified about being overweight.",partB));
         questionsB.add(new Question("Am terrified about being overweight.",partB));
         questionsB.add(new Question("Am terrified about being overweight.",partB));
-        questionsB.add(new Question("Am terrified about being overweight.",partB));
-        questionsB.add(new Question("Am terrified about being overweight.",partB));
         questionsB.add(new Question("Am terrified about being overweight.",partB26));
 
 
@@ -79,7 +98,7 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
         questionsC.add(new Question("Am terrified about being overweight.",partC));
         questionsC.add(new Question("Am terrified about being overweight.",partC));
         questionsC.add(new Question("Am terrified about being overweight.",partC));
-        questionsC.add(new Question("Am terrified about being overweight.",partC));
+
 
     }
 }

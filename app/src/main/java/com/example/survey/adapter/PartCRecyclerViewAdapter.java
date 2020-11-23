@@ -2,6 +2,7 @@ package com.example.survey.adapter;
 
 
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +26,9 @@ import java.util.List;
 public class PartCRecyclerViewAdapter extends RecyclerView.Adapter<PartCRecyclerViewAdapter.ViewHolder> {
 
     List<Question> questions;
-    public static OnItemClickListener sOnItemClickListener;
+    public static PartCRecyclerViewAdapter.OnItemClickListener sOnItemClickListener;
     public static interface OnItemClickListener {
-        public void onItemClick(View view, int position);
+        public void onItemClick(View view, int position,int option);
     }
 
     public PartCRecyclerViewAdapter(List<Question> questions, OnItemClickListener onItemClickListener) {
@@ -52,7 +53,13 @@ public class PartCRecyclerViewAdapter extends RecyclerView.Adapter<PartCRecycler
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Question question= questions.get(position);
-
+        holder.question.setText(question.getQuestion());
+        holder.option1.setText(question.getOption().get(0).getName());
+        holder.option2.setText(question.getOption().get(1).getName());
+        holder.option3.setText(question.getOption().get(2).getName());
+        holder.option4.setText(question.getOption().get(3).getName());
+        holder.option5.setText(question.getOption().get(4).getName());
+        holder.option6.setText(question.getOption().get(5).getName());
 
     }
 
@@ -64,10 +71,9 @@ public class PartCRecyclerViewAdapter extends RecyclerView.Adapter<PartCRecycler
         else
             return questions.size();
     }
-
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder {
         public TextView question;
-        public RadioButton option1,option2,option3,option4,option5,option6;
+        public RadioButton option1, option2, option3, option4, option5, option6;
         public LinearLayout mLinearLayout;
 
         public ViewHolder(@NonNull View itemView) {
@@ -84,48 +90,58 @@ public class PartCRecyclerViewAdapter extends RecyclerView.Adapter<PartCRecycler
             option1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int position= PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
-                    sOnItemClickListener.onItemClick(view,position);
+                    int position = PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+                    sOnItemClickListener.onItemClick(view, position, 1);
                 }
             });
             option2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int position= PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
-                    sOnItemClickListener.onItemClick(view,position);
+                    int position = PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
+                    sOnItemClickListener.onItemClick(view, position, 1);
                 }
             });
             option3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int position= PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
-                    sOnItemClickListener.onItemClick(view,position);
+                    int position = PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
+                    sOnItemClickListener.onItemClick(view, position, 2);
                 }
             });
             option4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int position= PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
-                    sOnItemClickListener.onItemClick(view,position);
+                    int position = PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
+                    sOnItemClickListener.onItemClick(view, position, 3);
                 }
             });
             option5.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int position= PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
-                    sOnItemClickListener.onItemClick(view,position);
+                    int position = PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
+                    sOnItemClickListener.onItemClick(view, position, 4);
                 }
             });
             option6.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int position= PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
-                    sOnItemClickListener.onItemClick(view,position);
+                    int position = PartCRecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
+                    sOnItemClickListener.onItemClick(view, position, 5);
                 }
             });
 
         }
-
     }
 
 }

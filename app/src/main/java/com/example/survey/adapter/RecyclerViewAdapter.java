@@ -2,6 +2,7 @@ package com.example.survey.adapter;
 
 
 
+        import android.util.Log;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -91,13 +92,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View view) {
                     int position= RecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
-                    sOnItemClickListener.onItemClick(view,position,1);
+                    Log.d("MainActivity","position :"+position);
+
+                    sOnItemClickListener.onItemClick(view,position,0);
                 }
             });
             option2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int position= RecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
                     sOnItemClickListener.onItemClick(view,position,1);
                 }
             });
@@ -105,6 +110,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View view) {
                     int position= RecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
                     sOnItemClickListener.onItemClick(view,position,2);
                 }
             });
@@ -112,6 +119,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View view) {
                     int position= RecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
                     sOnItemClickListener.onItemClick(view,position,3);
                 }
             });
@@ -119,6 +128,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View view) {
                     int position= RecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
                     sOnItemClickListener.onItemClick(view,position,4);
                 }
             });
@@ -126,6 +137,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View view) {
                     int position= RecyclerViewAdapter.ViewHolder.super.getAdapterPosition();
+                    Log.d("MainActivity","position :"+position);
+
                     sOnItemClickListener.onItemClick(view,position,5);
                 }
             });

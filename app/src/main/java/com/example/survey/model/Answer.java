@@ -16,6 +16,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class Answer {
 
+    public Answer(String questionNumber,String answer) {
+        this.questionNumber = questionNumber;
+        this.answer=answer;
+    }
+
+    private int mark;
+
+    public void setMark(int mark) {
+        this.mark = mark;
+    }
+
+    public int getMark() {
+        return mark;
+    }
+
     @JsonProperty("questionNumber")
     private String questionNumber;
     @JsonProperty("answer")
